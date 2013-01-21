@@ -20,7 +20,9 @@
  *    Work: Lead Product Designer @ http://kyruus.com
  */
 
+$s3path: "//s3.amazonaws.com/cafewell-content/assets/"
 $fontAwesomePath:   "fontawesome-webfont" !default
+$fullFontPath: $s3path + $fontAwesomePath
 $borderColor:       #eee !default
 $iconMuted:         #eee !default
 @mixin border-radius($radius)
@@ -31,8 +33,8 @@ $iconMuted:         #eee !default
 
 @font-face
   font-family: 'FontAwesome'
-  src: font-url('#{$fontAwesomePath}.eot')
-  src: font-url('#{$fontAwesomePath}.eot?#iefix') format("embedded-opentype"), font-url('#{$fontAwesomePath}.woff') format("woff"), font-url('#{$fontAwesomePath}.ttf') format("truetype")
+  src: url('#{$fullFontPath}.eot')
+  src: url('#{$fullFontPath}.eot?#iefix') format("embedded-opentype"), url('#{$fullFontPath}.woff') format("woff"), url('#{$fullFontPath}.ttf') format("truetype")
   font-weight: normal
   font-style: normal
 
